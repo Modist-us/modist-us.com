@@ -1,0 +1,171 @@
+/* Modist Landing Page Styles */
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color: #d4af37;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-dark: #000000;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-content {
+  text-align: center;
+  max-width: 600px;
+  padding: var(--spacing-xl) 0;
+}
+
+.logo-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.logo {
+  height: 180px;
+  margin: 0 auto;
+  width: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form Styles */
+.signup-form {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  border: 1px solid white;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--accent-color);
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(212, 175, 55, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Success message styles */
+.success-message {
+  display: none;
+  background-color: rgba(0, 128, 0, 0.1);
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-xl);
+}
+
+.success-message.visible {
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .logo {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .logo {
+    height: 120px;
+  }
+}
