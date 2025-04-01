@@ -1,0 +1,9 @@
+mkdir modist-us.com
+cd modist-us.com
+echo "# modist-us.com" > README.md
+git init
+git add README.md
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/Modist-us/modist-us.com.git
+git push -u origin main
